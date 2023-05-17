@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/commom.css">
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="{% static 'css/commom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{#    <link rel="stylesheet" href="css/commom.css">#}
+{#    <link rel="stylesheet" href="./css/base.css">#}
 </head>
 
 <body style="background: RGB(237, 242, 247);"><!--页头-->
     <div id="headCon " class="clearfix:after clearfix">
         <div class="w">
             <div class="logo">
-                <image src="./image/u3 (1).svg"></image>
+                <image src=" {% static 'image/u3 (1).svg' %}"></image>
             </div>
             <div class="Nav">
                 <a href="" class="link">职业画像</a>
@@ -41,63 +44,63 @@
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u142.png"></image>
+                    <image src="{% static 'image/u142.png' %}"></image>
                 </div>
                 <span>知乎</span>
                 <buttton class="btn1" onclick="authorize('https://www.zhihu.com/signin')">点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u141.png"></image>
+                    <image src="{% static 'image/u141.png' %}"></image>
                 </div>
                 <span>支付宝</span>
                 <buttton class="btn1" onclick="authorize('https://www.alipay.com/')"  >点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u140.png"></image>
+                    <image src="{% static 'image/u140.png' %}"></image>
                 </div>
                 <span>bilibili</span>
                 <buttton class="btn1" onclick="authorize('https://passport.bilibili.com/login')" >点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u55.png"></image>
+                    <image src="{% static 'image/u55.png' %}"></image>
                 </div>
                 <span>贴吧</span>
                 <buttton class="btn1 " onclick="authorize('https://passport.baidu.com/v2/?login&tpl=tb&u=https%3A%2F%2Ftieba.baidu.com%2Findex.html')" >点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u123.png"></image>
+                    <image src="{% static 'image/u123.png' %}"></image>
                 </div>
                 <span>淘宝</span>
                 <buttton class="btn1" onclick="authorize('https://login.taobao.com/member/login.jhtml')" >点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u122.png"></image>
+                    <image src="{% static 'image/u122.png' %}"></image>
                 </div>
                 <span>京东</span>
                 <buttton class="btn1" onclick="authorize('https://passport.jd.com/new/login.aspx')" >点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u66.png"></image>
+                    <image src="{% static 'image/u66.png' %}"></image>
                 </div>
                 <span>github</span>
                 <buttton class="btn1" onclick="authorize('https://github.com/login')" >点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u124.png"></image>
+                    <image src="{% static 'image/u124.png' %}"></image>
                 </div>
                 <span>豆瓣</span>
                 <buttton class="btn1" onclick="authorize('https://accounts.douban.com/passport/login?source=main')" >点击授权</buttton>
             </li>
             <li class="list">
                 <div>
-                    <image src="./image/u125.png"></image>
+                    <image src="{% static 'image/u125.png' %}"></image>
                 </div>
                 <span>微博</span>
                 <buttton class="btn1" onclick="authorize('https://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=https%3A%2F%2Fweibo.com%2F&domain=.weibo.com&ua=php-sso_sdk_client-0.6.36&_rand=1613961514.6169')" >点击授权</buttton>
@@ -107,13 +110,13 @@
     <div class="w">
         <div class="row2">
             <div class="col1">
-                <image src="./image/u5.svg"></image>
-                <image src="./image/u5.svg"></image>
+                <image src="{% static 'image/u5.svg' %}"></image>
+                <image src="{% static 'image/u5.svg' %}"></image>
             </div>
 
 
             <div class="col2">
-              <div class="row3"><image src="./image/u3 (1).svg"></image> <button class="btn2">点击授权</button></div>
+              <div class="row3"><image src="{% static 'image/u3 (1).svg' %}"></image> <button class="btn2">点击授权</button></div>
               <div class="row4"> <button class="btn3">上传pdf简历</button></div>
             </div>
         </div>
