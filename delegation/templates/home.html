@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/commom.css">
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+
+<body style="background: RGB(237, 242, 247);"><!--页头-->
+    <div id="headCon " class="clearfix:after clearfix">
+        <div class="w">
+            <div class="logo">
+                <image src="./image/u3 (1).svg"></image>
+            </div>
+            <div class="Nav">
+                <a href="" class="link">职业画像</a>
+                <a href="" class="link">AI求职指导</a>
+                <a href="" class="link">精品课程</a>
+                <a href="" class="link">多数据源</a>
+                <a href="" class="link">博客文章</a>
+                <a href="" class="link">创始团队</a>
+                <a href="" class="link">价格</a>
+                <button class="btn">登录</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w">
+        <div class="row">
+            <li class="list">
+
+                <image src="./image/u11.jpg"></image>
+
+                <span>CSDN</span>
+                <buttton class="btn1"  onclick="authorize('https://passport.csdn.net/login?code=public')">点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u142.png"></image>
+                </div>
+                <span>知乎</span>
+                <buttton class="btn1" onclick="authorize('https://www.zhihu.com/signin')">点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u141.png"></image>
+                </div>
+                <span>支付宝</span>
+                <buttton class="btn1" onclick="authorize('https://www.alipay.com/')"  >点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u140.png"></image>
+                </div>
+                <span>bilibili</span>
+                <buttton class="btn1" onclick="authorize('https://passport.bilibili.com/login')" >点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u55.png"></image>
+                </div>
+                <span>贴吧</span>
+                <buttton class="btn1 " onclick="authorize('https://passport.baidu.com/v2/?login&tpl=tb&u=https%3A%2F%2Ftieba.baidu.com%2Findex.html')" >点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u123.png"></image>
+                </div>
+                <span>淘宝</span>
+                <buttton class="btn1" onclick="authorize('https://login.taobao.com/member/login.jhtml')" >点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u122.png"></image>
+                </div>
+                <span>京东</span>
+                <buttton class="btn1" onclick="authorize('https://passport.jd.com/new/login.aspx')" >点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u66.png"></image>
+                </div>
+                <span>github</span>
+                <buttton class="btn1" onclick="authorize('https://github.com/login')" >点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u124.png"></image>
+                </div>
+                <span>豆瓣</span>
+                <buttton class="btn1" onclick="authorize('https://accounts.douban.com/passport/login?source=main')" >点击授权</buttton>
+            </li>
+            <li class="list">
+                <div>
+                    <image src="./image/u125.png"></image>
+                </div>
+                <span>微博</span>
+                <buttton class="btn1" onclick="authorize('https://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=https%3A%2F%2Fweibo.com%2F&domain=.weibo.com&ua=php-sso_sdk_client-0.6.36&_rand=1613961514.6169')" >点击授权</buttton>
+            </li>
+        </div>
+    </div>
+    <div class="w">
+        <div class="row2">
+            <div class="col1">
+                <image src="./image/u5.svg"></image>
+                <image src="./image/u5.svg"></image>
+            </div>
+
+
+            <div class="col2">
+              <div class="row3"><image src="./image/u3 (1).svg"></image> <button class="btn2">点击授权</button></div>
+              <div class="row4"> <button class="btn3">上传pdf简历</button></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+function authorize(url) {
+  // 打开新窗口访问指定的URL
+  window.open(url);
+
+  // 将按钮文本修改为“已授权”
+  event.target.innerHTML = '已授权';
+}
+</script>
+</html>
