@@ -80,9 +80,9 @@ DATABASES = {
         # "ENGINE": "django.db.backends.sqlite3",
         # "NAME": BASE_DIR / "db.sqlite3",
         "ENGINE":'django.db.backends.mysql',
-        "NAME":'careehubinfo',
+        "NAME":'javaweb',
         "USER":'root',
-        "PASSWORD":"abc123",
+        "PASSWORD":"wen101810",
         "HOST":"127.0.0.1",
         "PORT":'3306'
     }

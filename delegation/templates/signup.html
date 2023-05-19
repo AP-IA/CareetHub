@@ -1,0 +1,90 @@
+
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static  "css/index.css"%}>
+    <title>注册界面</title>
+</head>
+
+<body>
+<div class="box">
+
+    <div class="left">
+        <h2>欢迎来到 JOBFLOW AI！</h2>
+
+        <img class="huojian" src={% static  "image/huojian.png"%} align="right" width="100" height="100">
+
+    </div>
+
+
+
+    <div class="right">
+
+        <h4>用户注册</h4>
+        <h5>USER REGISTRATION </h5>
+
+
+        <div class="login-buttons">
+            <div class="login-button">
+                <img src={% static "image/phone-icon.png" %} alt="手机图标">
+                <span>手机注册</span>
+            </div>
+            <div class="login-button">
+                <img src={% static "image/wechat-icon.png" %} alt="微信图标">
+                <span>微信注册</span>
+            </div>
+        </div>
+
+        <div id="huo" class="huo">
+            <p>
+                <span>————————或者使用电子邮箱注册————————</span>
+            </p>
+        </div>
+
+        <script>
+            function register() {
+                // 获取输入的邮箱和密码
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+
+                // 检查输入是否为空
+                if (email === '' || password === '') {
+                    alert('请输入邮箱和密码');
+                    return false;
+                }
+
+                // 注册成功，显示弹窗
+                alert('注册成功');
+
+                // 添加过渡效果
+                var page = document.getElementById('page');
+                page.classList.add('page-transition');
+
+                // 延迟跳转到首页
+                setTimeout(function () {
+                    window.location.href = "login.html";
+                }, 500); // 等待0.5秒（500毫秒）后跳转
+
+                return false;
+            }
+        </script>
+        </head>
+        <body>
+        <div id="page">
+        <form onsubmit="return register()">
+            <input class="acc" type="text" id="email" placeholder="输入邮箱号">
+            <input class="acc" type="password" id="password" placeholder="输入密码">
+            <input class="submit" type="submit" value="注册">
+        </form>
+        </div>
+        </body>
+    </div>
+</div>
+
+</body>
+
+</html>

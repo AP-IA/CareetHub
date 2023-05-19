@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static "css/index.css" %}>
+    <title>登录界面</title>
+</head>
+
+<body>
+<div class="box">
+
+    <div class="left">
+        <h2>欢迎来到 JOBFLOW AI！</h2>
+
+        <img class="huojian" src={% static "image/huojian.png" %} align="right" width="100" height="100">
+
+    </div>
+
+
+
+    <div class="right">
+
+        <h4>用户登录</h4>
+        <h5>The USRE LOGIN</h5>
+
+
+        <div class="login-buttons">
+            <div class="login-button">
+                <img src={% static "image/phone-icon.png" %} alt="手机图标">
+                <span>手机登录</span>
+            </div>
+            <div class="login-button">
+                <img src={% static "image/wechat-icon.png" %} alt="微信图标">
+                <span>微信登录</span>
+            </div>
+        </div>
+
+        <div id="huo" class="huo">
+            <p>
+                <span>————————或者使用电子邮箱登录————————</span>
+            </p>
+        </div>
+
+
+
+
+        <div id="popup" class="popup">
+            <p>登录成功</p>
+            <button onclick="closePopup()">关闭</button>
+        </div>
+        <script>
+            function login() {
+                // 获取输入的邮箱和密码
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+
+                // 检查输入是否为空
+                if (email === '' || password === '') {
+                    alert('请输入邮箱和密码');
+                    return false;
+                }
+
+                // 登录成功，显示弹窗
+                var popup = document.getElementById('popup');
+                popup.style.display = 'block';
+
+                // 添加过渡效果
+                var page = document.getElementById('page');
+                page.classList.add('page-transition');
+
+                // 延迟跳转到首页
+                setTimeout(function () {
+                    window.location.href = "index.html";
+                }, 3000); // 等待0.5秒（500毫秒）后跳转
+
+                return false;
+            }
+
+            function closePopup() {
+                var popup = document.getElementById('popup');
+                popup.style.display = 'none';
+            }
+
+
+        </script>
+        </head>
+        <body>
+        <div id="page">
+            <form onsubmit="return login()">
+                <input class="acc" type="text" id="email" placeholder="输入邮箱号">
+                <input class="acc" type="password" id="password" placeholder="输入密码">
+                <input class="submit" type="submit" value="登录">
+            </form>
+        </div>
+        </body>
+
+        <div class="fn">
+            <a href="signup.html">注册</a>
+            <a href="javascript:;">忘记密码?</a>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

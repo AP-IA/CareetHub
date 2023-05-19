@@ -1,0 +1,234 @@
+{% load static %}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+html::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background: linear-gradient(120deg, #5725bc 0%, #5725bc 100%) no-repeat;
+}
+
+::selection {
+    color: #fff;
+    background-color: rgb(144,129,241);
+
+}
+
+.box {
+    display: flex;
+    overflow: hidden;
+    width: 115rem;
+    height: 68rem;
+    background-color: rgba(255,255,255,60%);
+    border-radius: 1.5rem;
+    margin: 10% auto;
+    box-shadow: 0 0 1rem 0.2rem rgb(0 0 0 / 10%);
+}
+
+.box .left {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    background-color: #5725bc;
+}
+
+.box .left huojian{
+    margin-right: 2rem;
+
+    text-align: right;
+}
+
+
+.box .left h2{
+    color: rgb(251, 251, 251);
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+
+
+.box .left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/static/image/left.png);
+    background-size: cover;
+    opacity: 80%;
+}
+
+.box .right {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+
+.box .right h4{
+    color: rgb(87, 37, 188);
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+.box .right h5{
+    color: rgb(87, 37, 188);
+
+}
+
+
+.box .right form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box .right form .acc {
+    outline: none;
+    width: 80%;
+    height: 5rem;
+    font-size: 1.6rem;
+    margin-top: 5rem;
+    padding: 1rem 0 0 1.6rem;
+    border: none;
+    border-bottom:1px solid rgb(144,129,241) ;
+    color: rgb(144,129,241);
+    background-color: rgba(0,0,0,0);
+}
+
+.right form .acc:focus {
+    outline: none;
+    color: rgb(144,129,241);
+    padding: 1rem 0 0 1.6rem;
+}
+
+.right .a {
+    width: 60%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #5725bc 0%, #5725bc 100%);
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 6rem 0 0 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+.right .submit {
+    width: 60%;
+    height: 5rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #5725bc 0%, #5725bc 100%);
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 6rem 0 0 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.right .submit:hover {
+    box-shadow: 0 0 2rem -0.5rem rgb(0 0 0 / 15%);
+}
+
+.right .fn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 70%;
+}
+
+.right .fn a {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    color: #666;
+}
+
+.right .huo {
+    font-size: 14px;
+    color: #888888;
+    margin-top: 0;
+}
+
+.right .fn a:hover {
+    color: rgb(144,129,241);
+}
+
+.login-buttons {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    cursor: pointer;
+}
+
+.login-button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #f2f2f2;
+}
+
+.login-button img {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+     /* 添加 CSS 样式，用于过渡效果 */
+ .page-transition {
+     opacity: 0;
+     transition: opacity 0.5s ease-in-out;
+ }
+
+
+/*优化弹窗*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.popup p {
+    margin-bottom: 10px;
+}
+
+.popup button {
+    background-color: #5725bc;
+    color: #fff;
+    border: none;
+    width: 70px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
